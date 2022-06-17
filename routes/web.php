@@ -1,9 +1,11 @@
 <?php
-
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\signupController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CreateTable;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,4 +34,6 @@ use App\Http\Controllers\PageController;
 // });
 
 // Route::get('/trangchu',[PageController::class,'getIndex']);
-Route::get('/trangchu', [PageController::class,'getIndex']);
+// Route::get('/trangchu', [PageController::class,'getIndex']);
+
+Route::get('/sql', [CreateTable::class,'table']);
