@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\Http\Controllers\HotelController;
+use app\Http\Requests;
+use Input, File;
+use App\Http\Requests\HotelRequest;
+
 
 class hotelController extends Controller
 {

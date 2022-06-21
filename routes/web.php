@@ -5,6 +5,8 @@ use App\Http\Controllers\DemoController;
 use App\Http\Controllers\signupController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CreateTable;
+use App\Http\Controllers\hotelController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,9 @@ use App\Http\Controllers\CreateTable;
 // });
 
 // Route::get('/trangchu',[PageController::class,'getIndex']);
-// Route::get('/trangchu', [PageController::class,'getIndex']);
+Route::get('/trangchu', [PageController::class,'getIndex']);
 
-Route::get('/sql', [CreateTable::class,'table']);
+// Route::get('/sql', [CreateTable::class,'table']);
+
+Route::get('Signup',[hotelController::class, 'index']);
+Route::post('Signup',[hotelController::class, 'addRoom']);

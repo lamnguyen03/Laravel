@@ -1,3 +1,7 @@
+<?php
+if(session_id() === '')
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +55,7 @@
     </form>
 
    </div>
+  
    <div>
     @include ('error')
   </div>
