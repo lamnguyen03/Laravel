@@ -8,16 +8,7 @@ use App\Http\Controllers\CreateTable;
 use App\Http\Controllers\hotelController;
 
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 
 
@@ -35,10 +26,15 @@ use App\Http\Controllers\hotelController;
 //     return view('form_select');
 // });
 
-// Route::get('/trangchu',[PageController::class,'getIndex']);
-Route::get('/trangchu', [PageController::class,'getIndex']);
-
+Route::get('/trangchu',[PageController::class,'getIndex']);
+// Route::get('/trangchu', [PageController::class,'getIndex']);
 // Route::get('/sql', [CreateTable::class,'table']);
 
-Route::get('Signup',[hotelController::class, 'index']);
-Route::post('Signup',[hotelController::class, 'addRoom']);
+// Route::get('Signup',[hotelController::class, 'index']);
+// Route::post('Signup',[hotelController::class, 'addRoom']);
+
+// Route::get('/',function(){
+//     $data = DB::table('users')->find(3);
+//     print_r($data);
+// });
+
