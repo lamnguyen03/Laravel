@@ -25,7 +25,7 @@ use App\Http\Controllers\hotelController;
 // Route::get('/',function (){
 //     return view('form_select');
 // });
-
+Route::get('/type/{id}',[PageController::class,'getLoaiSp']);
 Route::get('/trangchu',[PageController::class,'getIndex']);
 // Route::get('/trangchu', [PageController::class,'getIndex']);
 // Route::get('/sql', [CreateTable::class,'table']);
@@ -38,3 +38,4 @@ Route::get('/trangchu',[PageController::class,'getIndex']);
 //     print_r($data);
 // });
 
+Route::get('/admin',[PageController::class, 'getAdminpage']);

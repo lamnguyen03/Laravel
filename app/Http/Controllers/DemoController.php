@@ -17,4 +17,5 @@ class DemoController extends Controller
         return view('test', compact('sum'));
         
     }
+    
 }

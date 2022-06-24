@@ -26,7 +26,5 @@
 @include('page/script')
 
 
-	<!-- include js files -->
-	
 </body>
 </html>
