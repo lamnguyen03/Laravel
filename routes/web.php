@@ -39,3 +39,4 @@ Route::get('/trangchu',[PageController::class,'getIndex']);
 // });
 
 Route::get('/admin',[PageController::class, 'getAdminpage']);
+Route::post('/admin',[PageController::class,'postAdminAdd']);

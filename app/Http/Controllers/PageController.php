@@ -28,8 +28,32 @@ class PageController extends Controller
         $sp_khac =  Product::where ('id_type','<>',$type)->paginate(3);
         return view ('page.loai_sanpham',compact('sp_theoloai','type_product','sp_khac'));
     }
-    
+
     public function getAdminpage(){
         return view ('AdminPage.AddForm');
+    }
+
+    public function postAdminAdd(Request $request){
+        $product= new Product();
+        if ($request->hasFile('inputImage')){
+            $filename=$file->getClientOriginalName('inputImage');
+            $file->move('source/image/product',$fileName);
+        }
+        $fileName=null;
+        if ($request->file('inputImage')!=null){
+            $filen_name=$request->file('inputImage')->getClientOriginalName();
+
+        }
+        $product->name=$request->inputName;
+        $product->image=$file_name;
+        $product->description=$request->inputDescription;
+        $product->unit_price=$request->inputPrice;
+        $product->promotion_price=$request->inputPromotionPrice;
+        $product->unit=$request->inputUnit;
+        $product->new=$request->inputNew;
+        $product->id_type=$request->inputType;
+        $product->save();
+        return $this->getAdminpage();
+    
     }
 }
