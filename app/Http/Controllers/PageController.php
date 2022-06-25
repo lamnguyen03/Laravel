@@ -32,7 +32,9 @@ class PageController extends Controller
     public function getAdminpage(){
         return view ('AdminPage.AddForm');
     }
-
+    public function getIndexAdmin(){
+        return view ('');
+    }
     public function postAdminAdd(Request $request){
         $product= new Product();
         if ($request->hasFile('inputImage')){
