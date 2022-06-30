@@ -98,3 +98,4 @@ class PageController extends Controller
         return redirect('/showadmin');
 }
 }
+
